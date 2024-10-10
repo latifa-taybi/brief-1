@@ -9,12 +9,13 @@ html,
 body {
   font-family: "Lato", sans-serif;
   font-weight: 300;
+  
 }
 
 h2 {
   font-size: 100px;
   position: relative;
-  color: #5b85c0;
+  color: #9082a2;
   background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -116,7 +117,8 @@ section.page-container {
 }
 
 #intro {
-  max-width: 800px;
+  background-image: url('./images/codecraft_Banner_1.webp');
+  max-width: 900px;
 }
 #intro .section-container {
   margin-top: 70px;
