@@ -1,296 +1,73 @@
-@charset "UTF-8";
-/*** Import Fonts ***/
-@import url(https://fonts.googleapis.com/css?family=Lato:400,300);
-/*** Variables ***/
-/* -------------------------------- 
-		General Style
--------------------------------- */
-*{
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-
-}
-html,
-body {
-  background-color:rgb(200, 235, 170);
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+  background-color: #d6d5d5; 
+  color: #333; 
 }
 
-h2 {
-  font-size: 6rem;
-  position: relative;
-  color: #9082a2;
-  background-image: -webkit-linear-gradient(90deg, #a558d4 0%, #34619e 80%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -webkit-animation: hue 60s infinite linear;
+nav {
+  background-color: #007BFF; 
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: sticky;
+  top:0;
 }
 
-p.intro-des {
-  position: relative;
-  font-size: 1.25rem;
-  line-height: 35px;
-  margin-top: 1rem;
-}
-p.intro-des a {
-  color: #3c3c3c;
-}
-p.intro-des span {
-  font-size: 15px;
-}
-
-.button-row-container {
-  width: 250px;
-  height: 50px;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-}
-
-/*** Navbar ***/
-
-.navbar-container {
-  position: fixed;
-  top: 0;
-  left: 50%;
-  margin-right: 50%;
-  transform: translateX(-50%);
-  z-index: 10;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 100%);
-}
-
-
-.nav,
-.navbar {
-  width: 250px;
-  margin: auto;
-  margin-top: 20px;
-  font-family: "Lato", sans-serif;
-  font-size: 13px;
-  font-weight: 400;
-  letter-spacing: 2px;
-  list-style: none;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-}
-.nav a,
-.navbar a {
-  color: #3c3c3c;
+nav a {
+  color: white;
+  margin: 0 20px;
   text-decoration: none;
-}
-.nav .nav-item,
-.navbar .nav-item {
-  padding: 5px 0;
-}
-.nav .nav-item:after,
-.navbar .nav-item:after {
-  content: " ";
-  display: block;
-  height: 1px;
-  width: 100%;
-  position: relative;
-  top: 3px;
-  background: transparent;
-  transition: top 0.3s ease-out;
-  -webkit-transition: top 0.3s ease-out;
-}
-.nav .nav-item:hover:after,
-.navbar .nav-item:hover:after {
-  top: 7px;
-  background: #3c3c3c;
-}
-
-.active:after {
-  height: 2px !important;
-  background: #e74c3c !important;
-}
-
-section.page-container {
-  margin: auto;
-  width: 90%;
-  max-width: 800px;
-  height: 100vh;
-  position: relative;
-  text-align: center;
-}
-
-
-#intro{
-  width:100vh;
-  height:130vh;
-}
-
-img{
-  width:100%;
-  height: 200px;
-  display: flex;
-  margin:auto;
-}
-
-
-
-#rules{
-  width: 300px;
-
-}
-#rules h4{
-  color:#ffffff;
-  background: #71f0db;
-  padding: 10px 18px;
-  font-size: 40px;
-  font-weight: 700; 
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
-
-}
-#rules ul{
-  position: relative;
-  background: #ffffff;
-
-}
-#rules ul li{
-  list-style:none;
-  padding : 20px;
-  width:100%;
-  box-shadow:0 5px 25px rgba(0, 0, 0, .1);
-  
-
-}
-
-#contact{
-  width:100vh;
-  height:150vh;
-}
-
-.section-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 400px;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.section-container h4 {
-  font-size: 50px;
-  font-weight: 300;
-  color: #3c3c3c;
-  margin-bottom: 1.875rem;
-}
-
-.section-container p{
-  font-size: 20px;
-  margin:10px 0;
-}
-
-.section-container input{
-  font-size: 20px;
-  padding: 15px 10px;
-  width:100%;
-  border: 0;
-  border-radius:5px;
-  outline: none;
-}
-
-
-.section-container textarea{
-  font-size: 20px;
-  padding: 15px 10px;
-  width:100%;
-  border: 0;
-  border-radius:5px;
-  outline: none;
-}
-
-.section-container button{
-  font-size: 18px;
   font-weight: bold;
-  /* margin: 20px 0; */
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  padding: 10px 15px;
-  width:90%;
-  border: 0;
-  border-radius:5px;
-  background-color: #eff9f7;
-
 }
 
+nav a:hover {
+  color: #FFD700;
+}
 
-/*** General Button Styles ***/
-.button-container {
-  display: inline-block;
-  margin: 10px 10px;
-  cursor: pointer;
-  font-weight: 400;
-  letter-spacing: 2px;
-  height: 2.8125rem;
-  width: 12.5rem;
-  -webkit-perspective: 1000;
-  -ms-perspective: 1000;
-  perspective: 1000;
+section {
+  padding: 40px;
+  background-color: #fff; 
+  margin: 20px auto;
+  border-radius: 8px;
+  max-width: 800px;
 }
-.button-container .flipper {
-  transition: all 0.5s ease-in-out;
-  -webkit-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  position: relative;
+
+section:hover {
+  box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2); 
 }
-.button-container .button {
-  height: 45px;
-  width: 200px;
-  border-radius: 10px;
-  backface-visibility: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display:flex;
+/* contact */
+.contact-form {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  -webkit-box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
-  box-shadow: 1px 2px 4px -1px rgba(60, 60, 60, 0.64);
-}
-.button-container .button i.fa {
-  color: rgb(69, 63, 63);
-  font-size: 20px;
+  max-width: 400px;
   margin: auto;
-  text-shadow: 0.5px 1px 2px #3c3c3c;
-}
-.button-container .button.front {
-  z-index: 10;
-}
-.button-container .button.back {
-  color: rgb(250, 246, 246);
-  font-size: 15px;
-  text-transform: uppercase;
 }
 
+.contact-form input,
+.contact-form textarea {
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd; 
+  border-radius: 5px;
+  font-size: 16px;
+}
 
-/* -------------------------------- 
-			Water Fill
--------------------------------- */
-/*** Water Fill ***/
-.button-water-fill .button {
-  background-position: 0 -50%;
-  background-repeat: repeat-x;
-  transition: background-position 0.75s ease;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #007BFF; 
 }
-.button-water-fill .button:hover {
-  background-position: 100% 60%;
-  color: white !important;
+
+.contact-form button {
+  background-color: #007BFF;
+  color: white;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px; 
 }
-.button-water-fill.wave-black .button {
-  color: black;
-  background-image: url("https://s32.postimg.org/g5kiaqxit/wave_black.png");
-} 
+
+.contact-form button:hover {
+  background-color: #0056b3; 
+}

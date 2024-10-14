@@ -3,51 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="web site contact codecraft">
-    <title>Class Homepage</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <meta name="description" content="contact de classe CodeCraft">
+    <title>CodeCraft</title>
     <link rel="stylesheet" href="style.css">
-    
-</head>	
+</head>
 <body>
-	<!-- Navbar -->
-	<nav class="navbar-container">
-		<ul class="nav navbar">
-			<li class="nav-item"><a href="index.html">Home</a></li>
-			<li class="nav-item"><a href="rules.html">Rules</a></li>
-			<li class="nav-item active"><a href="contact.html">Contact</a></li>
-		</ul>
-	</nav>
-    <section class="page-container" id="contact">
-        <section class="section-container">
-          <h4>Get in Touch</h4>
-          <p>If you have any questions or feedback, please fill out the form below.</p>
-          <form action="#" method="post">
-              <p>Name:</p>
-              <input type="text" name="name" required placeholder="Your Name">
-              <br/>
-  
-  
-              <p>Email:</p>
-              <input type="email" name="email" required placeholder="Your Email">
-              
-              <p>Telephone:</p>
-              <input type="text" name="telephone" required placeholder="Your Phone Number">
-              
-              <p>Adresse:</p>
-              <input type="text" name="adresse" required placeholder="Your Adresse">
-              
-              <p>Message:</p>
-              <textarea  type="texte" name="message" required placeholder="Your Message"></textarea>
-              <br/>
-            <button type="submit">Send message</button>
-  
-              
-              
-          </form>
-  
-          
-              
-        </section>
-      </section>
+    <nav>
+        <a href="./index.html">Home</a>
+        <a href="./rules.html">Rules</a>
+        <a href="./contact.html">Contact</a>
+    </nav>
+    <section id="contact">
+        <h1>Contactez-nous</h1>
+        <p>Si vous avez des questions ou des commentaires, veuillez remplir le formulaire ci-dessous.</p>
+        <form class="contact-form">
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <input type="text" placeholder="Votre numero de telephone" required>
+            <input type="text" placeholder="Votre adresse" required>
+            <textarea placeholder="Votre message" rows="5" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
 </body>
